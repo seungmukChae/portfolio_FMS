@@ -1,4 +1,4 @@
-package com.bms.common.log;
+package com.fms.common.log;
 
 import java.util.Arrays;
 
