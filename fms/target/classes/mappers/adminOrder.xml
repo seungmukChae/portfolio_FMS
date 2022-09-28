@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper_admin_order">
+
+	<select id="selectNewOrderList" resultType="OrderDto">
+   		  SELECT  
+   					*  
+   		  FROM 
+   		  			ORDER_TB
+          ORDER BY 
+          			PAY_ORDER_TIME DESC
+	</select>
+	
+	<update id="updateDeliveryState" parameterType="hashmap" >
+	   UPDATE 
+	   			ORDER_TB
+      <set> 
+      		<if test='deliveryState != null and deliveryState != ""'>
+        		DELIVERY_STATE = #{deliveryState}
+      		</if>
+      </set>
+      WHERE 
+    	 		ORDER_ID = #{orderId}
+	</update>
+	
+	<resultMap type="hashMap" id="orderDetail">
+		<result column="PRODUCTS_ID" 			 	property="productsId"/>
+		<result column="PRODUCTS_NAME"	 		  	property="productsName"/>
+		<result column="DELIVERY_PRICE" 			property="deliveryPrice"/>
+		<result column="ORDER_ID" 			 		property="orderId"/>
+		<result column="ORDER_PRODUCTS_QTY" 	  	property="orderProductsQty"/>
+		<result column="SALE_PRICE"    				property="salePrice"/>
+		<result column="DELIVERY_METHOD" 	 		property="deliveryMethod"/>
+		<result column="RECEIVER_NAME" 		  		property="receiverName"/>
+		<result column="RECEIVER_HP1" 		  		property="receiverHp1"/>
+		<result column="RECEIVER_HP2" 		  		property="receiverHp2"/>
+		<result column="RECEIVER_HP3" 		  		property="receiverHp3"/>
+		<result column="DELIVERY_ADDRESS" 	  		property="deliveryAddress"/>
+		<result column="DELIVERY_MESSAGE" 	  		property="deliveryMessage"/>
+		<result column="PAY_METHOD" 		  		property="payMethod"/>
+		<result column="CARD_COM_NAME" 		  		property="cardComName"/>
+		<result column="CARD_PAY_MONTH" 	  		property="cardPayMonth"/>
+		<result column="DELIVERY_STATE" 	  		property="deliveryState"/>
+		<result column="MEMBER_ID" 			  		property="memberId"/>
+		<result column="MEMBER_NAME" 		  		property="memberName"/>
+		<result column="HP1" 				  		property="hp1"/>
+		<result column="HP2" 				  		property="hp2"/>
+		<result column="HP3" 				  		property="hp3"/>
+		<result column="EMAIL" 			  	  		property="email"/>
+		<result column="PRODUCTS_IMAGE" 	  		property="productsImage"/>
+	</resultMap>
+	
+	 <select id="selectOrderDetail" resultMap="orderDetail" parameterType="int"  >
+	     SELECT 
+	    		P.PRODUCTS_ID					AS PRODUCTS_ID,
+	    		P.PRODUCTS_NAME					AS PRODUCTS_NAME,
+	    		P.DELIVERY_PRICE				AS DELIVERY_PRICE,
+	    		P.PRODUCTS_IMAGE				AS PRODUCTS_IMAGE,
+	    		O.ORDER_PRODUCTS_QTY			AS ORDER_PRODUCTS_QTY,
+	    		O.SALE_PRICE					AS SALE_PRICE,
+	    		O.ORDER_ID						AS ORDER_ID,
+	    		O.DELIVERY_METHOD				AS DELIVERY_METHOD,
+	    		O.RECEIVER_NAME					AS RECEIVER_NAME,
+	    		O.RECEIVER_HP1					AS RECEIVER_HP1,
+	    		O.RECEIVER_HP2					AS RECEIVER_HP2,
+	    		O.RECEIVER_HP3					AS RECEIVER_HP3,
+	    		O.DELIVERY_ADDRESS				AS DELIVERY_ADDRESS,
+	    		O.DELIVERY_MESSAGE				AS DELIVERY_MESSAGE,
+	    		O.PAY_METHOD					AS PAY_METHOD,
+	    		O.CARD_COM_NAME					AS CARD_COM_NAME,
+	    		O.CARD_PAY_MONTH				AS CARD_PAY_MONTH,
+	    		O.DELIVERY_STATE				AS DELIVERY_STATE,
+	    		M.MEMBER_ID						AS MEMBER_ID,
+	    		M.MEMBER_NAME					AS MEMBER_NAME,
+	    		M.HP1							AS HP1,
+	    		M.HP2							AS HP2,
+	    		M.HP3							AS HP3,
+	    		M.EMAIL							AS EMAIL
+	    FROM 
+	    		ORDER_TB O
+	                  INNER JOIN PRODUCTS_TB P
+	                          ON O.PRODUCTS_ID = P.PRODUCTS_ID
+	                  INNER JOIN MEMBER_TB M
+	                		  ON O.MEMBER_ID = M.MEMBER_ID
+        WHERE 
+           		O.ORDER_ID = #{orderId}
+	</select>
+
+</mapper>

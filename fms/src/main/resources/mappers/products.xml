@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="mapper_products">
+
+	<select id="selectProductList" parameterType="String" resultType="ProductDto">
+		SELECT 
+   				*	
+   		FROM 
+   				PRODUCTS_TB
+   		WHERE
+   				PRODUCTS_STATUS = #{productsStatus}
+	</select>
+	
+	<select id="selectProductsDetail" parameterType="String" resultType="ProductDto">
+		SELECT
+				*
+		FROM
+				PRODUCTS_TB
+		WHERE
+				PRODUCTS_ID = #{productsId}
+	
+	</select>
+	
+	<!-- 게시글의 내용을 반환하는 쿼리 -->
+	<select id="getSearchBoard" parameterType="hashmap" resultType="ProductDto">
+		<choose>
+			<when test="searchKeyword.equals('total')">	<!-- 전체 검색일 경우 -->
+				<choose>
+					<when test="searchWord.equals('')">	<!-- 전체 검색중 검색 문자가 없을 경우 -->
+						SELECT
+								*
+						FROM
+								PRODUCTS_TB
+						ORDER BY
+								PUBLISHED_DATE DESC
+					</when>
+					<otherwise>	<!-- 전체 검색중 검색 문자가 있을 경우 -->
+						SELECT 
+								*
+						FROM
+								PRODUCTS_TB
+						WHERE
+								PRODUCT_NAME LIKE CONCAT('%' , #{searchWord} , '%') OR
+								PRODUCTS_BRAND CONCAT('%' , #{searchWord} , '%')
+						ORDER BY
+								PUBLISHED_DATE DESC
+					</otherwise>
+				</choose>
+			</when>
+			<otherwise>	<!-- 서치 키워드를 이용하여 검색하는 경우 -->
+				SELECT
+						*
+				FROM
+						PRODUCTS_TB
+				WHERE
+					<if test="searchKeyword.equals('writer')">
+						PRODUCT_NAME LIKE CONCAT('%' , #{searchWord} , '%')
+					</if>
+					<if test="searchKeyword.equals('subject')">
+						PRODUCTS_BRAND LIKE CONCAT('%' , #{searchWord} , '%')
+					</if>
+				ORDER BY
+						PUBLISHED_DATE DESC
+			</otherwise>
+		</choose>
+	</select>
+</mapper>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper_admin_products">
+	<select id="selectNewProductsList" resultType="ProductDto">
+	
+		SELECT
+				*
+		FROM
+				PRODUCTS_TB
+		ORDER BY
+				PUBLISHED_DATE DESC
+	
+	</select>
+
+	<insert id="insertNewProducts" parameterType="ProductDto">
+		    INSERT INTO 
+		  			PRODUCTS_TB (
+						PRODUCTS_ID,
+    					PRODUCTS_NAME,
+   						PRODUCTS_BRAND,
+   						PRODUCTS_STATUS,
+   						ORIGINAL_PRICE,
+    					SALE_PRICE,
+					    PUBLISHED_DATE,
+					    DELIVERY_PRICE,
+					    PRODUCTS_SORT,
+					    DELIVERY_METHOD,
+					    DELIVERY_DATE,
+					    BRAND_INTRO,
+					    PRODUCTS_INTRO,
+					    PRODUCTS_SIZE,
+					    PRODUCTS_POINT,
+					    PRODUCTS_IMAGE,
+					    PRODUCTS_COLOR
+		  			)
+		    VALUES (
+			       #{productsId},
+			       #{productsName},
+			       #{productsBrand},
+			       #{productsStatus},
+			       #{originalPrice},
+			       #{salePrice},
+			       #{publishedDate},
+			       #{deliveryPrice},
+			       #{productsSort},
+			       #{deliveryMethod},
+			       #{deliveryDate},
+			       #{brandIntro},
+			       #{productsIntro},
+			       #{productsSize},
+		  	   	   #{productsPoint},
+			       #{productsImage},
+			       #{productsColor}
+ 			 )
+	
+	</insert>
+
+	<select id="selectProductsDetail" parameterType="String" resultType="ProductDto">
+		SELECT
+				*
+		FROM
+				PRODUCTS_TB
+		WHERE
+				PRODUCTS_ID = #{productsId}
+	</select>
+	
+	<update id="updateProductsInfo" parameterType="hashmap" >
+	   UPDATE 
+	   			PRODUCTS_TB
+	   <set> 
+	      <if test='productsSort != null and productsSort != ""'>
+	        PRODUCTS_SORT = #{productsSort},
+	      </if>
+	      <if test='productsStatus != null and productsStatus != ""'>
+	        PRODUCTS_STATUS = #{productsStatus},
+	      </if>
+	      <if test='productsId != null and productsId != ""'>
+	        PRODUCTS_ID = #{productsId},
+	      </if>
+	      <if test='productsName != null and productsName != ""'>
+	        PRODUCTS_NAME = #{productsName},
+	      </if>
+	      <if test='productsBrand != null and productsBrand != ""'>
+	        PRODUCTS_BRAND = #{productsBrand},
+	      </if>
+	      <if test='originalPrice != null and originalPrice != ""'>
+	        ORIGINAL_PRICE = #{originalPrice},
+	      </if>
+	      <if test='salePrice != null and salePrice != ""'>
+	        SALE_PRICE = #{salePrice},
+	      </if>
+	      <if test='productsPoint != null and productsPoint != ""'>
+	        PRODUCTS_POINT = #{productsPoint},
+	      </if>
+	      <if test='publishedDate != null and publishedDate != ""'>
+	        PUBLISHED_DATE = #{publishedDate},
+	      </if>
+	      <if test='deliveryMethod != null and deliveryMethod != ""'>
+	        DELIVERY_METHOD = #{deliveryMethod},
+	      </if>
+	      <if test='deliveryPrice != null and deliveryPrice != ""'>
+	        DELIVERY_PRICE = #{deliveryPrice},
+	      </if>
+	      <if test='deliveryDate != null and deliveryDate != ""'>
+	        DELIVERY_DATE = #{deliveryDate},
+	      </if>
+	      <if test='productsImage != null and productsImage != ""'>
+	        PRODUCTS_IMAGE = #{productsImage},
+	      </if>
+	      <if test='productsSize != null and productsSize != ""'>
+	        PRODUCTS_SIZE = #{productsSize},
+	      </if>
+	      <if test='brandIntro != null and brandIntro != ""'>
+	        BRAND_INTRO = #{brandIntro},
+	      </if>
+	      <if test='productsColor != null and productsColor != ""'>
+	        PRODUCTS_COLOR = #{productsColor},
+	      </if>
+	      <if test='productsIntro != null and productsIntro != ""'>
+	        PRODUCTS_INTRO = #{productsIntro}
+	      </if>
+	    </set>
+		WHERE 
+				PRODUCTS_ID = #{productsId}
+	</update>
+	
+	<delete id="removeBoard" parameterType="String">
+		DELETE FROM
+				PRODUCTS_TB
+		WHERE
+				PRODUCTS_ID = #{productsId}
+	</delete>
+	
+</mapper>

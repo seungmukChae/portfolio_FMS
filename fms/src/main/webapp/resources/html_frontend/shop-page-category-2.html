@@ -1,0 +1,1756 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8">
+		<title>Smarty v5</title>
+		<meta name="description" content="...">
+
+		<meta name="viewport" content="width=device-width, maximum-scale=5, initial-scale=1">
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- up to 10% speed up for external res -->
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+		<link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+		<link rel="preconnect" href="https://fonts.googleapis.com/">
+		<link rel="preconnect" href="https://fonts.gstatic.com/">
+		<!-- preloading icon font is helping to speed up a little bit -->
+		<link rel="preload" href="assets/fonts/flaticon/Flaticon.woff2" as="font" type="font/woff2" crossorigin>
+
+		<link rel="stylesheet" href="assets/css/core.min.css">
+		<link rel="stylesheet" href="assets/css/vendor_bundle.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="demo.files/logo/icon_512x512.png">
+
+	</head>
+
+	<body>
+
+		<div id="wrapper">
+
+
+			<!-- page title -->
+			<div class="container py-5">
+
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb small">
+						<li class="breadcrumb-item"><a href="#">Home</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Earphones</li>
+					</ol>
+				</nav>
+
+				<h1 class="h2 fw-bold">Portable Speakers</h1>
+
+			</div>
+			<!-- /page title -->
+
+
+
+
+			<!-- -->
+			<div class="container pb-6">
+
+				<div class="row g-4">
+
+
+					<!-- sidebar -->
+					<div class="col-12 col-lg-3">
+
+						<!-- categories & filters -->
+						<nav class="card nav-deep nav-deep-light mb-2 mb-lg-3 bg-white shadow-none-md shadow-none-xs p-lg-4">
+
+							<!-- mobile trigger : categories -->
+							<button class="clearfix btn btn-toggle btn-sm w-100 py-3 text-align-left shadow-md border rounded d-flex d-lg-none align-items-center" data-bs-target="#nav_responsive" data-toggle-container-class="d-none d-sm-block bg-white shadow-md border animate-fadein rounded p-3">
+								<span class="group-icon float-start px-2">
+									<i class="fi fi-bars-2"><!-- icon --></i>
+									<i class="fi fi-close"><!-- icon --></i>
+								</span>
+								<span class="mx-0 fw-medium float-start">Categories</span>
+							</button>
+
+							<!-- desktop only -->
+							<h5 class="h6 d-none d-lg-block">
+								Categories
+							</h5>
+
+							<!-- navbar : navigation -->
+							<ul id="nav_responsive" class="nav flex-column d-none d-lg-block mt-1">
+
+								<li class="nav-item active">
+									<a class="nav-link px-0" href="#">
+										<span class="group-icon">
+											<i class="fi fi-arrow-end"></i>
+											<i class="fi fi-arrow-down"></i>
+										</span>
+
+										<span class="px-2 d-inline-block">
+											Earphones 
+										</span>
+
+										<span class="badge bg-warning text-dark float-end fw-normal">
+											New
+										</span>
+
+									</a>
+
+									<ul class="nav flex-column px-3">
+										<li class="nav-item active"><a class="nav-link" href="#">Portable speakers</a></li>
+										<li class="nav-item"><a class="nav-link" href="#">Sport</a></li>
+										<li class="nav-item"><a class="nav-link" href="#">Gifts</a></li>
+										<li class="nav-item"><a class="nav-link" href="#">Accessories</a></li>
+									</ul>
+
+								<li class="nav-item">
+									<a class="nav-link px-0" href="#">
+										<i class="fi fi-arrow-end m-0 smaller"></i> 
+										<span class="px-2 d-inline-block">
+											Home Amplifiers
+										</span>
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a class="nav-link px-0" href="#">
+										<i class="fi fi-arrow-end m-0 smaller"></i> 
+										<span class="px-2 d-inline-block">
+											Car Speakers
+										</span>
+									</a>
+								</li>
+
+							</ul>
+
+						</nav>
+						<!-- /categories & filters -->
+
+
+						<!-- mobile trigger : filters -->
+						<button class="clearfix btn btn-toggle btn-sm w-100 py-3 text-align-left shadow-md border rounded mb-1 d-block d-lg-none" data-bs-target="#sidebar_filters" data-toggle-container-class="d-none d-sm-block bg-white shadow-md border animate-fadein rounded p-3 fullscreen" data-toggle-body-class="overflow-hidden">
+							<i class="fi fi-eq-horizontal float-start px-2"><!-- icon --></i>
+							<span class="mx-0 fw-medium float-start">Filters</span>
+						</button>
+
+						<form method="get" id="sidebar_filters" class="d-none d-lg-block">
+
+							<!-- mobile only -->
+							<div class="bg-white pb-3 mb-4 d-block d-lg-none border-bottom">
+								
+								<i class="fi fi-eq-horizontal float-start"><!-- icon --></i>
+								<span class="d-inline-block fw-bold">Filters</span>
+
+								<!-- mobile : exit fullscreen -->
+								<a href="#" class="float-end btn-toggle text-dark mx-1" data-toggle-container-class="d-none d-sm-block bg-white shadow-md border animate-fadein rounded p-3 fullscreen" data-toggle-body-class="overflow-hidden" data-bs-target="#sidebar_filters">
+									<i class="fi fi-close"></i>
+								</a>
+
+							</div>
+							<!-- /mobile only -->
+
+
+							<!-- Reset Filters -->
+							<div class="card mb-3">
+								<div class="card-body">
+									<a href="#" class="text-danger float-end d-inline-block lh-1">
+										<i class="fi fi-close"></i>
+									</a>
+									Reset Filters
+								</div>
+							</div>
+							<!-- /Reset Filters -->
+
+
+							<!-- Price -->
+							<div class="card mb-3">
+								<div class="card-body">
+
+									<h3 class="fs-6 mb-4">
+										<a href="#" data-target-reset="#filter_price_list" class="form-advanced-reset hide-force text-danger float-end d-inline">
+											<i class="fi fi-close"></i>
+										</a>
+										<span>Price</span>
+									</h3>
+
+									<div id="filter_price_list">
+
+										<div class="form-check">
+										  <input class="form-check-input" type="radio" id="price-1" name="price">
+										  <label class="form-check-label px-2" for="price-1">$10 &ndash; $100</label>
+										</div>
+
+										<div class="form-check">
+										  <input class="form-check-input" type="radio" id="price-2" name="price">
+										  <label class="form-check-label px-2" for="price-2">$100 &ndash; $300</label>
+										</div>
+
+										<div class="form-check">
+										  <input class="form-check-input" type="radio" id="price-3" name="price">
+										  <label class="form-check-label px-2" for="price-3">$300 &ndash; $500</label>
+										</div>
+
+										<div class="form-check">
+										  <input class="form-check-input" type="radio" id="price-4" name="price">
+										  <label class="form-check-label px-2" for="price-4">$500 &ndash; $1000</label>
+										</div>
+
+										<div class="form-check">
+										  <input class="form-check-input" type="radio" id="price-5" name="price">
+										  <label class="form-check-label px-2" for="price-5">$1000 &ndash; $3000</label>
+										</div>
+
+										<small class="d-block border-top fw-medium pt-3 mt-3 mb-2">
+											Custom price
+										</small>
+
+										<div class="row gutters-xs">
+											<div class="col-5">
+												<label class="d-block small mb-1">From</label>
+												<input type="number" class="form-control form-control-sm" value="">
+											</div>
+											<div class="col-5">
+												<label class="d-block small mb-1">To</label>
+												<input type="number" class="form-control form-control-sm" value="">
+											</div>
+
+											<div class="col-2">
+												<button type="submit" class="btn btn-sm w-100 btn-light mt-4 px-2">
+													<i class="fi fi-arrow-end m-0"></i>
+												</button>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+
+							<!-- Color, size, rating -->
+							<div class="card mb-3">
+								<div class="card-body">
+
+
+									<!-- Color -->
+									<h3 class="fs-6 mb-4">
+										<a href="#" data-target-reset="#filter_color_list" class="form-advanced-reset hide-force text-danger float-end d-inline">
+											<i class="fi fi-close"></i>
+										</a>
+										<span>Color</span>
+									</h3>
+
+									<div id="filter_color_list">
+
+										<label class="form-selector rounded-circle">
+											<input type="checkbox" name="color[]">
+											<i style="background: #377dff"></i>
+										</label>
+
+										<label class="form-selector rounded-circle">
+											<input type="checkbox" name="color[]">
+											<i style="background: #6c757d"></i>
+										</label>
+
+										<label class="form-selector rounded-circle">
+											<input type="checkbox" name="color[]">
+											<i style="background: #dc3545"></i>
+										</label>
+
+										<label class="form-selector rounded-circle">
+											<input type="checkbox" name="color[]">
+											<i style="background: #fad776"></i>
+										</label>
+
+										<label class="form-selector rounded-circle">
+											<input type="checkbox" name="color[]">
+											<i style="background: #e83e8c"></i>
+										</label>
+
+										<label class="form-selector rounded-circle">
+											<input type="checkbox" name="color[]">
+											<i style="background: #6610f2"></i>
+										</label>
+
+										<label class="form-selector rounded-circle">
+											<input type="checkbox" name="color[]">
+											<i style="background: #4c2c92"></i>
+										</label>
+
+										<label class="form-selector rounded-circle">
+											<input type="checkbox" name="color[]">
+											<i style="background: #ffffff"></i>
+										</label>
+
+										<label class="form-selector rounded-circle">
+											<input type="checkbox" name="color[]">
+											<i style="background: #000000"></i>
+										</label>
+
+										<label class="form-selector rounded-circle">
+											<input type="checkbox" name="color[]">
+											<i style="background: #ff0000"></i>
+										</label>
+
+									</div>
+
+
+								
+									<!-- Size -->
+									<h3 class="fs-6 my-4">
+										<a href="#" data-target-reset="#filter_size_list" class="form-advanced-reset hide-force text-danger float-end d-inline">
+											<i class="fi fi-close"></i>
+										</a>
+										<span>Size</span>
+									</h3>
+
+									<div id="filter_size_list">
+										<label class="form-selector">
+											<input type="radio" name="size[]">
+											<span>SM</span>
+										</label>
+
+										<label class="form-selector">
+											<input type="radio" name="size[]">
+											<span>M</span>
+										</label>
+
+										<label class="form-selector">
+											<input type="radio" name="size[]">
+											<span>XS</span>
+										</label>
+
+										<label class="form-selector">
+											<input type="radio" name="size[]">
+											<span>XL</span>
+										</label>
+
+										<label class="form-selector">
+											<input type="radio" name="size[]">
+											<span>XXL</span>
+										</label>
+									</div>
+
+
+									
+									<!-- Rating -->
+									<h3 class="fs-6 my-4">
+										<a href="#" data-target-reset="#filter_rating_list" class="form-advanced-reset hide-force text-danger float-end d-inline">
+											<i class="fi fi-close"></i>
+										</a>
+										<span>Rating</span>
+									</h3>
+
+									<div id="filter_rating_list">
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="rate-5" value="">
+										  <label class="form-check-label px-2" for="rate-5">
+												<span class="rating-5 text-warning float-start mt-1"><!-- stars --></span> 
+												<span class="text-muted smaller float-start mt-1">(12)</span>
+										  </label>
+										</div>
+
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="rate-4" value="">
+										  <label class="form-check-label px-2" for="rate-4">
+												<span class="rating-4 text-warning float-start mt-1"><!-- stars --></span> 
+												<span class="text-muted smaller float-start mt-1">(33)</span>
+										  </label>
+										</div>
+
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="rate-3" value="">
+										  <label class="form-check-label px-2" for="rate-3">
+												<span class="rating-3 text-warning float-start mt-1"><!-- stars --></span> 
+												<span class="text-muted smaller float-start mt-1">(7)</span>
+										  </label>
+										</div>
+
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="rate-2" value="">
+										  <label class="form-check-label px-2" for="rate-2">
+												<span class="rating-2 text-warning float-start mt-1"><!-- stars --></span> 
+												<span class="text-muted smaller float-start mt-1">(5)</span>
+										  </label>
+										</div>
+
+										<div class="form-check">
+										  <input class="form-check-input" type="checkbox" id="rate-1" value="">
+										  <label class="form-check-label px-2" for="rate-1">
+												<span class="rating-1 text-warning float-start mt-1"><!-- stars --></span> 
+												<span class="text-muted smaller float-start mt-1">(2)</span>
+										  </label>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+							<!-- /Ratings -->
+
+
+							<!-- Brands -->
+							<div class="card mb-3">
+								<div class="card-body">
+
+									<div class="input-group-over">
+										<input type="text" class="form-control form-control-sm iqs-input" data-container=".iqs-container" value="" placeholder="quick filter">
+										<span class="fi fi-search btn btn-sm px-3 text-gray-500"></span>
+									</div>
+
+									<div class="iqs-container mt-3 scrollable-horizontal scrollable-styled-light" style="max-height: 250px;">
+
+										<div class="form-check iqs-item">
+										  <input class="form-check-input" type="checkbox" id="brand-1" name="brand[]" value="">
+										  <label class="form-check-label px-1" for="brand-1">
+												Nike <span class="text-muted smaller d-inline-block">(11)</span>
+										  </label>
+										</div>
+
+										<div class="form-check iqs-item">
+										  <input class="form-check-input" type="checkbox" id="brand-2" name="brand[]" value="">
+										  <label class="form-check-label px-1" for="brand-2">
+												Adidas <span class="text-muted smaller d-inline-block">(45)</span>
+										  </label>
+										</div>
+
+										<div class="form-check iqs-item">
+										  <input class="form-check-input" type="checkbox" id="brand-3" name="brand[]" value="">
+										  <label class="form-check-label px-1" for="brand-3">
+												Sony <span class="text-muted smaller d-inline-block">(45)</span>
+										  </label>
+										</div>
+
+										<div class="form-check iqs-item">
+										  <input class="form-check-input" type="checkbox" id="brand-4" name="brand[]" value="">
+										  <label class="form-check-label px-1" for="brand-4">
+												Samsung <span class="text-muted smaller d-inline-block">(13)</span>
+										  </label>
+										</div>
+
+										<div class="form-check iqs-item">
+										  <input class="form-check-input" type="checkbox" id="brand-5" name="brand[]" value="">
+										  <label class="form-check-label px-1" for="brand-5">
+												LG <span class="text-muted smaller d-inline-block">(21)</span>
+										  </label>
+										</div>
+
+										<div class="form-check iqs-item">
+										  <input class="form-check-input" type="checkbox" id="brand-6" name="brand[]" value="">
+										  <label class="form-check-label px-1" for="brand-6">
+												Panasonic <span class="text-muted smaller d-inline-block">(21)</span>
+										  </label>
+										</div>
+
+										<div class="form-check iqs-item">
+										  <input class="form-check-input" type="checkbox" id="brand-7" name="brand[]" value="">
+										  <label class="form-check-label px-1" for="brand-7">
+												AOC <span class="text-muted smaller d-inline-block">(21)</span>
+										  </label>
+										</div>
+
+										<div class="form-check iqs-item">
+										  <input class="form-check-input" type="checkbox" id="brand-8" name="brand[]" value="">
+										  <label class="form-check-label px-1" for="brand-8">
+												Liveda <span class="text-muted smaller d-inline-block">(21)</span>
+										  </label>
+										</div>
+
+										<div class="form-check iqs-item">
+										  <input class="form-check-input" type="checkbox" id="brand-9" name="brand[]" value="">
+										  <label class="form-check-label px-1" for="brand-9">
+												Dell <span class="text-muted smaller d-inline-block">(15)</span>
+										  </label>
+										</div>
+
+										<div class="form-check iqs-item">
+										  <input class="form-check-input" type="checkbox" id="brand-10" name="brand[]" value="">
+										  <label class="form-check-label px-1" for="brand-10">
+												Apple <span class="text-muted smaller d-inline-block">(21)</span>
+										  </label>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+							<!-- /Brands -->
+
+
+							<!-- apply filters button -->
+							<button type="submit" class="btn btn-primary btn-soft btn-sm w-100">
+								Apply Filters
+							</button>
+
+						</form>
+
+					</div>
+					<!-- /sidebar -->
+
+
+					<!-- products -->
+					<div class="col-12 col-lg-9">
+
+
+            <!-- additional filters -->
+            <div class="d-flex justify-content-between mb-3 bg-white p-3 shadow-md rounded">
+
+              <div class="position-relative">
+                <a id="dropdownMenuFilter" href="#" class="text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span>Popular First</span>
+                  <svg class="mx-1" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+
+                <ul class="dropdown-menu shadow-lg rounded-xl" aria-labelledby="dropdownMenuFilter">
+                  <li><a class="dropdown-item active" href="#">Popular First</a></li>
+                  <li><a class="dropdown-item" href="#">Newest First</a></li>
+                  <li><a class="dropdown-item" href="#">Avg. Review</a></li>
+                  <li><a class="dropdown-item" href="#">Price: High</a></li>
+                  <li><a class="dropdown-item" href="#">Price: Low</a></li>
+                </ul>
+              </div>            
+
+              <div class="d-inline-grid gap-auto-2">
+                <a rel="nofollow" href="#" class="text-gray-700 text-decoration-none"><!-- grid -->
+                  <svg height="24px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">  
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                  </svg>
+                </a>
+                <a rel="nofollow" href="#" class="text-gray-400 text-decoration-none"><!-- list -->
+                  <svg height="24px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">  
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+            <!-- /additional filters -->
+
+
+						<!-- product list -->
+						<div class="row g-2 g-xl-3">
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- badges, countdown -->
+									<div class="position-absolute top-0 start-0 m-1 m-lg-3 z-index-1">
+										
+										<!-- 
+
+											SOW : Timer Countdown
+
+												Backgrounds:
+													.bg-primary 
+													.bg-secondary 
+													.bg-danger 
+													.bg-warning 
+													.bg-info
+													etc
+
+										-->
+										<div class="bg-danger text-white hide animate-fadein smaller opacity-9 px-2 py-1 mb-1 rounded timer-countdown timer-countdown-inline" 
+											data-timer-countdown-from="11/21/2030 16:00:00" 
+											data-timer-countdown-end-hide-self="true" 
+											data-timer-countdown-end-hide-target="">
+
+											<strong>Limited offer:</strong> 
+
+											<span class="d-block d-xl-inline-block">
+												<span class="d"></span> days, 
+												<span class="h"></span>:<span class="m"></span>:<span class="s"></span>
+											</span>
+
+										</div>
+
+										<!-- badge -->
+										<div class="clearfix"><!-- RTL: change me-1 to ms-1 -->
+											<span class="float-start badge bg-danger text-white mb-1 me-1">-12%</span>
+											<span class="float-start badge bg-warning text-dark mb-1 me-1">+ gift</span>
+											<span class="float-start badge bg-success text-white mb-1 me-1">new</span>
+										</div>
+
+									</div>
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- regular image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/1-min.jpg" alt="..."> 
+										</figure>
+
+										<!-- OR : background image -->
+										<!-- ratio-1x1, ratio-4x3, ratio-16x9 -->
+										<!-- <figure class="ratio ratio-1x1 bg-cover" style="background-image:url(demo.files/images/unsplash/products/speakers/1-min.jpg)"></figure> -->
+										<!-- lazy load -->
+										<!-- <figure class="ratio ratio-1x1 bg-cover lazy" data-background-image="demo.files/images/unsplash/products/speakers/1-min.jpg"></figure> -->
+
+										<span class="d-block fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">Sport Speakers CX</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<del class="text-muted">$112.00</del> 
+												<span class="text-dark">$99.00</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/2-min.jpg" alt="..."> 
+										</figure>
+
+										<span class="d-block text-center-xs fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">Audiophile Pioneer SRR</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<del class="text-muted">$44.00</del> 
+												<span class="text-dark">$36.99</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/3-min.jpg" alt="..."> 
+										</figure>
+
+										<span class="d-block text-center-xs fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">Sport Jabra Elite 75T</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<del class="text-muted">$98.00</del> 
+												<span class="text-dark">$68.00</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/4-min.jpg" alt="..."> 
+										</figure>
+
+										<span class="d-block text-center-xs fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">Speakers Klipsch RSB-6</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<!-- <del class="text-muted">$37.99</del>  -->
+												<span class="text-dark">$34.99</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/5-min.jpg" alt="..."> 
+										</figure>
+
+										<span class="d-block text-center-xs fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">Senheiser CX.88T</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<del class="text-muted">$19.95</del> 
+												<span class="text-dark">$18.00</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/6-min.jpg" alt="..."> 
+										</figure>
+
+										<span class="d-block text-center-xs fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">Audio Tehnics Hi-FI</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<del class="text-muted">$68.99</del> 
+												<span class="text-dark">$49.99</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/7-min.jpg" alt="..."> 
+										</figure>
+
+										<span class="d-block text-center-xs fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">On-Ear Bluetooth 2.0</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<del class="text-muted">$55.00</del> 
+												<span class="text-dark">$45.00</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/8-min.jpg" alt="..."> 
+										</figure>
+
+										<span class="d-block text-center-xs fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">PC/Gaming Audio Tehnics</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<!-- <del class="text-muted">$32.99</del>  -->
+												<span class="text-dark">$173.00</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/9-min.jpg" alt="..."> 
+										</figure>
+
+										<span class="d-block text-center-xs fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">Gym Jabra 35Y</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<del class="text-muted">$85.00</del> 
+												<span class="text-dark">$65.00</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/10-min.jpg" alt="..."> 
+										</figure>
+
+										<span class="d-block text-center-xs fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">Audiophile Pioneer CT1</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<!-- <del class="text-muted">$133.00</del>  -->
+												<span class="text-dark">$98.00</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/11-min.jpg" alt="..."> 
+										</figure>
+
+										<span class="d-block text-center-xs fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">Speakers Klipsch SU9-1</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<!-- <del class="text-muted">$42.99</del>  -->
+												<span class="text-dark">$22.99</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+
+							<!-- item -->
+							<div class="col-6 col-md-4">
+
+								<div class="bg-white shadow-sm shadow-3d-hover transition-all-ease-250 transition-hover-top rounded show-hover-container p-3 h-100">
+
+									<!-- hover buttons : top -->
+									<div class="position-absolute top-0 end-0 text-align-end z-index-3 m-3 show-hover-item d-none d-sm-inline-block" style="width:60px">
+										
+										<!-- add to favourite : not logged in -->
+										<!--
+										<a href="#" class="js-ajax-modal btn bg-white shadow-lg btn-sm rounded-circle mb-2"
+										    data-href="_ajax/modal_signin.html"
+										    data-ajax-modal-size="modal-md"
+										    data-ajax-modal-centered="false"
+										    data-ajax-modal-backdrop="static">
+										    <i class="fi fi-heart-slim"></i>
+										</a>
+										-->
+
+										<!-- add to favourite : logged in -->
+										<a href="#" class="btn-toggle btn bg-white shadow-lg btn-sm rounded-circle mb-2" 
+											data-bs-toggle="tooltip" 
+											data-bs-original-title="add to favourite" 
+											data-bs-placement="left" 
+
+											data-toggle-ajax-url-on="demo.files/php/demo.ajax_request.php?product_id=1&amp;action=add_to_favourite"
+											data-toast-success-message="Added to your favourite!"
+											data-toast-success-position="bottom-center">
+											<i class="fi fi-heart-slim"></i>
+										</a>
+
+										<a href="#" class="btn bg-white shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to compare">
+											<i class="fi fi-graph"></i>
+										</a>
+
+										<a href="#" class="btn btn-danger shadow-lg btn-sm rounded-circle mb-2" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="add to cart">
+											<i class="fi fi-cart-1"></i>
+										</a>
+									</div>
+									<!-- /hover buttons : top -->
+
+									<a href="shop-page-product-2.html" class="d-block text-gray-800">
+
+										<!-- image -->
+										<figure class="text-center">
+											<img class="img-fluid" src="demo.files/images/unsplash/products/speakers/12-min.jpg" alt="..."> 
+										</figure>
+
+										<span class="d-block text-center-xs fs-6">
+
+											<!-- rating -->
+											<span class="d-block smaller text-muted">
+												<i class="rating-4 smaller text-warning"></i> (4.7)
+											</span>
+
+											<!-- title -->
+											<span class="d-block fw-medium">Panasonic SU-9CX</span>
+
+											<!-- price -->
+											<span class="d-block fw-medium">
+												<!-- <del class="text-muted">$220.00</del>  -->
+												<span class="text-dark">$17.95</span>
+											</span>
+
+										</span>
+
+									</a>
+
+								</div>
+
+							</div>
+							<!-- /item -->
+
+						</div>
+						<!-- /product list -->
+
+
+						<!-- pagination -->
+						<nav aria-label="pagination" class="mt-5">
+							<ul class="pagination pagination-pill justify-content-end justify-content-center justify-content-md-end">
+
+								<li class="page-item disabled">
+									<a class="page-link" href="#" tabindex="-1">Previous</a>
+								</li>
+								
+								<li class="page-item active">
+									<a class="page-link" href="#">1 <span class="visually-hidden">(current)</span></a>
+								</li>
+								
+								<li class="page-item" aria-current="page">
+									<a class="page-link" href="#">2</a>
+								</li>
+								
+								<li class="page-item">
+									<a class="page-link" href="#">3</a>
+								</li>
+								
+								<li class="page-item">
+									<a class="page-link" href="#">Next</a>
+								</li>
+
+							</ul>
+						</nav>
+						<!-- pagination -->
+								
+
+					</div>
+					<!-- /products -->
+
+
+				</div>
+
+			</div>
+			<!-- / -->
+
+
+
+
+			<!-- Footer -->
+			<footer id="footer" class="shadow-xs">
+				
+				<div class="container py-5">
+
+					<div class="row">
+
+						<div class="col-12 col-lg-8">
+
+							<div class="row mb-3">
+
+								<!-- Col 1 -->
+								<div class="col-12 col-lg-4 mb-1">
+
+									<!-- mobile only : SOW Toggle Button -->
+									<button class="clearfix btn btn-toggle btn-sm w-100 text-align-left shadow-md border rounded mb-1 d-block d-lg-none" 
+											data-bs-target="#footer_c1" 
+											data-toggle-container-class="d-none d-sm-block bg-white shadow-md border animate-fadein rounded p-3">
+										
+										<span class="group-icon p-2 float-start">
+											<i class="fi fi-bars-2"></i>
+											<i class="fi fi-close"></i>
+										</span>
+
+										<span class="h5 py-2 m-0 float-start">
+											Orders
+										</span>
+									</button>
+
+									<!-- desktop only -->
+									<h3 class="h5 py-3 m-0 d-none d-lg-block">
+										Orders
+									</h3>
+
+
+									<!-- navbar : navigation -->
+									<ul id="footer_c1" class="nav flex-column d-none d-lg-block">
+										<li class="list-item">
+											<a class="d-block py-1" href="#">My Account</a>
+										</li>
+
+										<li class="list-item">
+											<a class="d-block py-1" href="#">How do I order?</a>
+										</li>
+
+										<li class="list-item">
+											<a class="d-block py-1" href="#">Payment Methods</a>
+										</li>
+									</ul>
+
+								</div>
+
+								<!-- Col 2 -->
+								<div class="col-12 col-lg-4 mb-1">
+
+									<!-- mobile only : SOW Toggle Button -->
+									<button class="clearfix btn btn-toggle btn-sm w-100 text-align-left shadow-md border rounded mb-1 d-block d-lg-none" 
+											data-bs-target="#footer_c2" 
+											data-toggle-container-class="d-none d-sm-block bg-white shadow-md border animate-fadein rounded p-3">
+										
+										<span class="group-icon p-2 float-start">
+											<i class="fi fi-bars-2"></i>
+											<i class="fi fi-close"></i>
+										</span>
+
+										<span class="h5 py-2 m-0 float-start">
+											Explore
+										</span>
+									</button>
+
+									<!-- desktop only -->
+									<h3 class="h5 py-3 m-0 d-none d-lg-block">
+										Explore
+									</h3>
+
+
+									<!-- navbar : navigation -->
+									<ul id="footer_c2" class="nav flex-column d-none d-lg-block">
+										<li class="list-item">
+											<a class="d-block py-1" href="blog-page-sidebar.html">Smarty Blog</a>
+										</li>
+
+										<li class="list-item">
+											<a class="d-block py-1" href="#">Shipping</a>
+										</li>
+
+										<li class="list-item">
+											<a class="d-block py-1" href="#">Cookies</a>
+										</li>
+									</ul>
+
+
+								</div>
+
+								<!-- Col 3 -->
+								<div class="col-12 col-lg-4 mb-1">
+
+									<!-- mobile only : SOW Toggle Button-->
+									<button class="clearfix btn btn-toggle btn-sm w-100 text-align-left shadow-md border rounded mb-1 d-block d-lg-none" 
+											data-bs-target="#footer_c3" 
+											data-toggle-container-class="d-none d-sm-block bg-white shadow-md border animate-fadein rounded p-3">
+										
+										<span class="group-icon p-2 float-start">
+											<i class="fi fi-bars-2"></i>
+											<i class="fi fi-close"></i>
+										</span>
+
+										<span class="h5 py-2 m-0 float-start">
+											Support
+										</span>
+										
+									</button>
+
+									<!-- desktop only -->
+									<h3 class="h5 py-3 m-0 d-none d-lg-block">
+										Support
+									</h3>
+
+
+									<!-- navbar : navigation -->
+									<ul id="footer_c3" class="nav flex-column d-none d-lg-block">
+										<li class="list-item">
+											<a class="d-block py-1" href="#">Refund Policy</a>
+										</li>
+
+										<li class="list-item">
+											<a class="d-block py-1" href="#">Privacy Policy</a>
+										</li>
+
+										<li class="list-item">
+											<a class="d-block py-1" href="#">Terms &amp; Conditions</a>
+										</li>
+									</ul>
+
+								</div>
+
+							</div>
+
+						</div>
+
+
+						<div class="col">
+
+							<h5 class="my-3">Follow us</h5>
+							<form novalidate class="bs-validate" method="post" action="#">
+								<div class="input-group mb-3">
+									<input required type="email" name="subscribe_email" value="" class="form-control" placeholder="email address" aria-label="email address">
+									<button class="btn btn-dark">Subscribe</button>
+								</div>
+							</form>
+
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="border-top">
+					<div class="container text-center py-5">
+
+						<!-- logo -->
+						<span class="h--70 d-inline-flex align-items-center">
+							<img src="assets/images/logo/logo_dark.svg" width="110" height="38" alt="...">
+						</span>
+
+						<p class="m-0 text-gray-500 fs-6">
+
+							&copy; My Company Inc. 2015 – 2019. 
+
+							<br>
+
+							All Rights Reserved.
+						
+						</p>
+
+
+						<div class="mt-5"> 
+
+							<!-- social -->
+							<a href="#" class="btn btn-sm btn-light transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="facebook page">
+								<i class="fi fi-social-facebook"></i> 
+							</a>
+
+							<a href="#" class="btn btn-sm btn-light transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="twitter page">
+								<i class="fi fi-social-twitter"></i> 
+							</a>
+
+							<a href="#" class="btn btn-sm btn-light transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="linkedin page">
+								<i class="fi fi-social-linkedin"></i> 
+							</a>
+
+							<a href="#" class="btn btn-sm btn-light transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="youtube page">
+								<i class="fi fi-social-youtube"></i> 
+							</a>
+
+						
+
+							<!-- credit cards -->
+							<ul class="list-inline mb-0 mt-2"> 
+
+								<li class="list-inline-item m-0"> 
+									<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/visa.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="visa credit card icon">
+								</li> 
+
+								<li class="list-inline-item m-0"> 
+									<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/mastercard.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="mastercard credit card icon">
+								</li> 
+
+								<li class="list-inline-item m-0"> 
+									<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/discover.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="discover credit card icon">
+								</li>
+
+								<li class="list-inline-item m-0"> 
+									<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/amazon.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="amazon credit card icon">
+								</li>
+								
+								<li class="list-inline-item m-0"> 
+									<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/paypal.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="paypal credit card icon">
+								</li>
+
+								<li class="list-inline-item m-0"> 
+									<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/skrill.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="skrill credit card icon">
+								</li>
+
+								<!-- more vendors on assets/images/credit_card/ -->
+
+							</ul>
+
+						</div>
+
+
+					</div>
+				</div>
+
+			</footer>
+			<!-- /Footer -->
+
+
+		</div><!-- /#wrapper -->
+
+		<script src="assets/js/core.min.js"></script>
+		
+	</body>
+</html>
